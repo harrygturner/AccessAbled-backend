@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Attraction.destroy_all
+
+require_relative 'seed_data/seed_controller.rb'
+
+Attraction.create(SeedAttractions.parse_attractions)

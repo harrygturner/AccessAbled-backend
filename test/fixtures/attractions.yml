@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  about_attraction: MyString
+  long: 1
+  lat: 1
+  dis_parking: false
+  car_park: MyString
+  accessability: MyString
+  door_type: MyString
+  hearing_assistance: MyString
+  counter_height: MyString
+  lifts: MyString
+  chair_manouverability: MyString
+  dis_toilets: MyString
+  reduce_fees: MyString
+  staff_training: MyString
+  assistance_dogs: MyString
+  braille_doc: false
+  large_print_doc: MyString
+  mob_allowed: MyString
+  additional_info: MyString
+
+two:
+  name: MyString
+  about_attraction: MyString
+  long: 1
+  lat: 1
+  dis_parking: false
+  car_park: MyString
+  accessability: MyString
+  door_type: MyString
+  hearing_assistance: MyString
+  counter_height: MyString
+  lifts: MyString
+  chair_manouverability: MyString
+  dis_toilets: MyString
+  reduce_fees: MyString
+  staff_training: MyString
+  assistance_dogs: MyString
+  braille_doc: false
+  large_print_doc: MyString
+  mob_allowed: MyString
+  additional_info: MyString
