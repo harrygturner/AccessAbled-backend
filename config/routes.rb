@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get '/reviews', to: 'reviews#index'
   get '/reviews/:id', to: 'reviews#show'
   post '/reviews', to: 'reviews#create'
+
+  post '/likes', to: 'reviews#increase_likes'
 end

@@ -3,6 +3,9 @@ class UserSerializer < ActiveModel::Serializer
     :name,
     :username,
     :email,
-    :password,
-    :reviews
+    :password
+  has_many :reviews
+  class ReviewSerializer < ActiveModel::Serializer
+    attributes :id, :comment, :rating, :like_count
+  end
 end

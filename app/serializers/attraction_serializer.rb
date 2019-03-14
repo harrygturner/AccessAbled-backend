@@ -19,6 +19,9 @@ class AttractionSerializer < ActiveModel::Serializer
     :braille_doc,
     :large_print_doc,
     :mob_allowed,
-    :additional_info,
-    :reviews
+    :additional_info 
+  has_many :reviews
+  class ReviewSerializer < ActiveModel::Serializer
+    attributes :id, :comment, :rating, :like_count
+  end
 end
