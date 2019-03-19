@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  line: MyString
+  step_min: 1
+  step_max: 1
+  gap_min: 1
+  gap_max: 1
+  level_access_by_ramp: MyString
+  platform: 1
+  direction_towards: MyString
+  direction: MyString
+
+two:
+  line: MyString
+  step_min: 1
+  step_max: 1
+  gap_min: 1
+  gap_max: 1
+  level_access_by_ramp: MyString
+  platform: 1
+  direction_towards: MyString
+  direction: MyString

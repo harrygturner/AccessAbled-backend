@@ -7,7 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Attraction.destroy_all
+AccessibleStation.destroy_all
+Stop.destroy_all
+NearbyStation.destroy_all
 
 require_relative 'seed_data/seed_controller.rb'
 
 Attraction.create(SeedAttractions.parse_attractions)
+AccessibleStation.create(SeedAccessibleStations.parse_stations)
+Stop.create(SeedStopData.parse_stops)
+NearbyStation.create(SeedNearbyStations.parse_nearest_stations)

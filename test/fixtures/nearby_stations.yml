@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  attraction_id: 1
+  accessible_station_id: 1
+  long: 1.5
+  lat: 1.5
+  distance: 1
+
+two:
+  attraction_id: 1
+  accessible_station_id: 1
+  long: 1.5
+  lat: 1.5
+  distance: 1

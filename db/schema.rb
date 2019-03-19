@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_14_174028) do
+ActiveRecord::Schema.define(version: 2019_03_19_121208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accessible_stations", force: :cascade do |t|
+    t.string "name"
+    t.string "accessibility_type"
+    t.string "lift_access"
+    t.string "limited_cap_lift"
+    t.string "additional_access_info"
+    t.string "bus_route_accessible"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "taxi_rank"
+    t.string "accessible_toilet"
+    t.string "accessible_toilet_note"
+  end
 
   create_table "attractions", force: :cascade do |t|
     t.string "name"
@@ -38,6 +52,18 @@ ActiveRecord::Schema.define(version: 2019_03_14_174028) do
     t.string "additional_info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "address"
+  end
+
+  create_table "nearby_stations", force: :cascade do |t|
+    t.integer "attraction_id"
+    t.integer "accessible_station_id"
+    t.float "long"
+    t.float "lat"
+    t.integer "distance"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -48,6 +74,21 @@ ActiveRecord::Schema.define(version: 2019_03_14_174028) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "like_count", default: 0
+  end
+
+  create_table "stops", force: :cascade do |t|
+    t.string "line"
+    t.integer "step_min"
+    t.integer "step_max"
+    t.integer "gap_min"
+    t.integer "gap_max"
+    t.string "level_access_by_ramp"
+    t.integer "platform"
+    t.string "direction_towards"
+    t.string "direction"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "accessible_station_id"
   end
 
   create_table "users", force: :cascade do |t|

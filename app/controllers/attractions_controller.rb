@@ -22,7 +22,7 @@ class AttractionsController < ApplicationController
    private 
 
    def find_attraction 
-      @attraction = User.find(params[:id])
+      @attraction = Attraction.find_by(id: params[:id])
    end 
 
 end
