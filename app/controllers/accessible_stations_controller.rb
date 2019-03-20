@@ -6,7 +6,7 @@ class AccessibleStationsController < ApplicationController
    end 
 
    def show
-      @accessible_station = AccessibleStaions.find_by(id: params[:id])
+      @accessible_station = AccessibleStation.find_by(id: params[:id])
       render json: @accessible_station
    end 
 
