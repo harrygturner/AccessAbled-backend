@@ -23,6 +23,7 @@ class AttractionSerializer < ActiveModel::Serializer
     :address
   has_many :reviews
   class ReviewSerializer < ActiveModel::Serializer
-    attributes :id, :comment, :rating, :like_count
+    attributes :id, :comment, :rating, :like_count, :created_at
+
   end
 end

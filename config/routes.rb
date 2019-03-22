@@ -4,12 +4,15 @@ Rails.application.routes.draw do
   post '/users', to: 'users#create'
   patch '/user/:id', to: 'users#update'
   delete '/user/:id', to: 'users#destroy'
+  post '/login', to: 'users#login'
+  get '/validate', to: 'users#validate'
 
   resources :attractions
 
   get '/reviews', to: 'reviews#index'
   get '/reviews/:id', to: 'reviews#show'
   post '/reviews', to: 'reviews#create'
+  get '/attraction_reviews/:id', to: 'reviews#attraction_reviews'
 
   post '/likes', to: 'reviews#increase_likes'
 

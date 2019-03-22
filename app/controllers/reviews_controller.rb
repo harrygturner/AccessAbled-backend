@@ -10,6 +10,11 @@ class ReviewsController < ApplicationController
       render json: @review
    end 
 
+   def attraction_reviews
+      @reviews = Review.where(attraction_id: params[:id])
+      render json: @reviews
+   end
+
    def create
       @review = Review.new(review_params)
       if @review.save
@@ -36,7 +41,7 @@ class ReviewsController < ApplicationController
    end
 
    def review_params
-      params.require(:review).permit(:comment, :rating)
+      params.require(:review).permit(:comment, :rating, :title, :attraction_id, :user_id)
    end
 
 end

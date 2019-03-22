@@ -10,10 +10,28 @@ class UsersController < ApplicationController
       render json: @user
    end 
 
+   def login 
+      @user = User.find_by(username: params[:username])
+      if @user && @user.authenticate(params[:password])
+         render json: {username: @user.username, token: issue_token({id: @user.id}), id: @user.id}
+      else 
+         render json: {error: 'Username/password combination invalid.'}, status: 401
+      end 
+   end 
+
+   def validate 
+      @user = get_current_user
+      if @user 
+         render json: {token: issue_token({id: @user.id}), id: @user.id, username: @user.username}
+      else
+         render json: {error: 'Username/password combination invalid.'}, status: 401
+      end 
+   end 
+
    def create 
-      @user = User.new(user_params)
+      @user = User.new(name: params[:name], username: params[:username], email: params[:email], password: params[:password])
       if @user.save 
-         render json: @user 
+         render json: {username: @user.username, token: issue_token({id: @user.id}), id: @user.id}
       else 
          render json: {error: 'Unable to create user.'}, status: 400
       end 
@@ -42,9 +60,5 @@ class UsersController < ApplicationController
    def find_user 
       @user = User.find(params[:id])
    end 
-
-   def user_params
-      params.require(:user).permit(:name, :username, :password, :email)
-   end
 
 end
