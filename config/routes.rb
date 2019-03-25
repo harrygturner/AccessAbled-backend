@@ -14,8 +14,6 @@ Rails.application.routes.draw do
   post '/reviews', to: 'reviews#create'
   get '/attraction_reviews/:id', to: 'reviews#attraction_reviews'
 
-  post '/likes', to: 'reviews#increase_likes'
-
   get '/accessible_stations', to: 'accessible_stations#index'
   get '/accessible_stations/:id', to: 'accessible_stations#show'
   get '/stops', to: 'stops#index'
@@ -23,5 +21,7 @@ Rails.application.routes.draw do
 
   get '/attraction_stations', to: 'nearby_stations#index'
   get '/attraction_stations/:id', to: 'nearby_stations#attraction_stations'
+
+  post '/likes', to: 'likes#create'
 
 end

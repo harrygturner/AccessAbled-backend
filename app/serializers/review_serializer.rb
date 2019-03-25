@@ -3,9 +3,14 @@ class ReviewSerializer < ActiveModel::Serializer
 
   belongs_to :user
   class UserSerializer < ActiveModel::Serializer
-  attributes :id, 
-    :name,
-    :username
+    attributes :id, 
+      :name,
+      :username
+  end
+
+  has_many :likes
+  class LikeSerializer < ActiveModel::Serializer
+    attributes :user_id
   end
 end
 
