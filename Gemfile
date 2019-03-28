@@ -47,4 +47,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rb-readline'
 gem 'active_model_serializers'
 gem 'jwt'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 

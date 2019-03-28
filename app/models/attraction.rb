@@ -12,7 +12,9 @@ class Attraction < ApplicationRecord
 
    include REXML
    
-   URL = 'http://transportapi.com/v3/uk/tube/stations/near.json?app_id=5b8791d6&app_key=394be7257ade9e582be1a6e267df783d'
+   AppId = ENV['tflAppId']
+   AppKey = ENV['tflAppKey']
+   URL = "http://transportapi.com/v3/uk/tube/stations/near.json?app_id=#{AppId}&app_key=#{AppKey}"
 
    def get_nearby_tubes
       long = "&lon=#{self.long}"

@@ -53,7 +53,7 @@ class AttractionsController < ApplicationController
          end 
          NearbyStation.create(nearby_accessible_stations)
 
-         render json: {id: @attraction.id}
+         render json: @attraction
       else 
          render json: {error: 'Unable to create attraction.'}, status: 400
       end 
