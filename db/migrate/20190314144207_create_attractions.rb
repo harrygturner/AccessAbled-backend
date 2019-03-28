@@ -7,7 +7,7 @@ class CreateAttractions < ActiveRecord::Migration[5.2]
       t.float :lat
       t.boolean :dis_parking
       t.string :car_park
-      t.string :accessability
+      t.string :accessibility
       t.string :door_type
       t.string :hearing_assistance
       t.string :counter_height

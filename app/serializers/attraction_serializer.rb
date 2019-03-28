@@ -6,7 +6,7 @@ class AttractionSerializer < ActiveModel::Serializer
     :lat,
     :dis_parking,
     :car_park,
-    :accessability,
+    :accessibility,
     :door_type,
     :hearing_assistance,
     :counter_height,
@@ -20,7 +20,8 @@ class AttractionSerializer < ActiveModel::Serializer
     :large_print_doc,
     :mob_allowed,
     :additional_info,
-    :address
+    :address,
+    :image_id
   has_many :reviews
   class ReviewSerializer < ActiveModel::Serializer
     attributes :id, :comment, :rating, :like_count, :created_at
