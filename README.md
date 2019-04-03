@@ -6,7 +6,7 @@ During one of my projects at University I was lucky enough to work with the Aust
 
 Accessabled provides information to people about an attractions accessibility from the type of door at the main entrance to nearest accessible tube stops and what line is it accessible via. It is also possible to leave reviews and even add attractions that aren't on the website already.
  
-## Screenshots
+## Demo & Tutorial
 [Demo](https://youtu.be/wwby6tJBN7s)
 
 ## Tech/framework used
