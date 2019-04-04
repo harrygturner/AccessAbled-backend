@@ -1,4 +1,4 @@
-## :blue_heart:   AccessAbled   :blue_heart:
+## :blue_heart:   AccessAbled   :wheelchair:
 AccessAbled makes London accessible to all members of society. It is like Tripadvisor but focuses on what people with disabilities look for when deciding to visit a London attraction. Frontend written in React.js with vanilla CSS, no styling packages were imported, and backend written in Ruby on Rails. Cloudinary was used to upload images and store them. Google Maps API was used to display attraction locations and tube stations. Data Scraping along with an XML file provided by TFL (Transport For London) was used to extract information about the accessibility of every tube stop in London and London attractions. This data was then used to create AccessAbled’s unique database.
 
 ## Motivation
@@ -15,3 +15,52 @@ Accessabled provides information to people about an attractions accessibility fr
 - [Rails](https://rubyonrails.org/)
 - [XML](https://api-portal.tfl.gov.uk/docs)
 - [JWT](https://jwt.io/) 
+
+## Project Requirements
+
+- :ballot_box_with_check: Auth
+- :ballot_box_with_check: Tests
+- :ballot_box_with_check: Multiple has_many_through relationships
+- :ballot_box_with_check: Seeds from a complex data set
+- :ballot_box_with_check: Custom routes
+- :ballot_box_with_check: Custom controller/model methods
+- :ballot_box_with_check: Basic database query optimizations
+- :ballot_box_with_check: Background jobs for slow actions
+- :ballot_box_with_check: Sockets or email integration
+- :ballot_box_with_check: One significant refactor
+- :ballot_box_with_check: Validation
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+Give examples
+```
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running
+
+Say what the step will be
+
+```
+Give the example
+```
+
+And repeat
+
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo
+
+## License
+[MIT license](https://opensource.org/licenses/mit-license.php)
+
+MIT © [Harry Turner](https://github.com/harrygturner)
